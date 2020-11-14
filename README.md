@@ -34,11 +34,12 @@ Diferentemente do TCP:
 - Não há garantia que eles cheguem ao destino
 - Não há garantia da ordem de chegada dos pacotes
 - Pacotes de até 1024 bytes
-<b> Datagramas do lado do cliente: enviando datagramas<b>
+
+<b> Datagramas do lado do cliente: enviando datagramas</b>
 - DatagramPacket: DatagramPacket(dado, tamanho, host, porta)
 - DataGramSocket: DatagramSocket() send(pacote)
  
-<b> Datagramas do lado do servidor: recebendo datagramas<b>
+<b> Datagramas do lado do servidor: recebendo datagramas</b>
 - DatagramPacket: DatagramPacket(dado, tamanho)
 - DataGramSocket: DatagramSocket(porta) receive(pacote)
   
