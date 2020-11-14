@@ -12,3 +12,17 @@ O cliente pode se comunicar com um servidor java usando o protocolo telnet. Para
 ### Cliente Java X Servidor Java
 
 <img src="https://github.com/MarcosJuunioor/sistemas-distribuidos/blob/master/comunicacao-via-sockets.png" />
+
+## Servidor MultiThread (múltiplos clientes)
+Para que um servidor java socket possa receber requisições de diversos clientes,  é necessário que o mesmo instancie uma thread para
+cada um. O pacote "servidormultithread" possui um código de exemplo para tal situação.
+
+## Serialização
+Além de tipos primitivos, também se pode transmitir objetos entre clientes e servidores. Para que um objeto possa ser utilizado em um
+fluxo de entrada ou saída, ele deve ser serializável:
+- A classe deve ser pública
+- Deve implementar a interface Serializable
+- Deve ter o construtor padrão (sem argumentos)
+Considerações:
+- É enviada uma cópia do objeto (passagem por valor)
+- Ambos os lados devem conhecer o objeto (ter a definição da classe)
