@@ -26,3 +26,21 @@ fluxo de entrada ou saída, ele deve ser serializável:
 Considerações:
 - É enviada uma cópia do objeto (passagem por valor)
 - Ambos os lados devem conhecer o objeto (ter a definição da classe)
+
+## Sockets UDP
+UDP: Unreliable Datagram Protocol
+Envio rápido de informações pela rede através de pacotes datagramas.
+Diferentemente do TCP:
+- Não há garantia que eles cheguem ao destino
+- Não há garantia da ordem de chegada dos pacotes
+- Pacotes de até 1024 bytes
+<b> Datagramas do lado do cliente: enviando datagramas<b>
+- DatagramPacket: DatagramPacket(dado, tamanho, host, porta)
+- DataGramSocket: DatagramSocket() send(pacote)
+ 
+<b> Datagramas do lado do servidor: recebendo datagramas<b>
+- DatagramPacket: DatagramPacket(dado, tamanho)
+- DataGramSocket: DatagramSocket(porta) receive(pacote)
+  
+No pacote "enviarecebeudp" tem um exemplo de implementação.
+
