@@ -45,3 +45,7 @@ Diferentemente do TCP:
   
 No pacote "enviarecebeudp" tem um exemplo de implementação.
 
+## RMI - Remote Method Invocation
+Uma tecnologia que estende o modelo de objetos utilizado por Java para a rede. 
+Permite a passagem da referência de objetos pela rede (pode-se usar uma jvm remota).
+
